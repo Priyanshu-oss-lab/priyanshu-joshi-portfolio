@@ -1,0 +1,135 @@
+/* Palette adapted from the user's reference: charcoal, teal, sand, peach, and pale mint. */
+:root {
+  --bg: #2C3531;
+  --surface: #116466;
+  --surface-blue: #D1E8E2;
+  --ink: #D1E8E2;
+  --muted: #B7CAC4;
+  --line: rgba(209, 232, 226, .2);
+  --blue: #116466;
+  --blue-dark: #0D4E4D;
+  --violet: #D9B08C;
+  --mint: #FFCB9A;
+}
+
+body {
+  background: radial-gradient(ellipse at 82% 4%, rgba(17, 100, 102, .35), transparent 30%), var(--bg);
+  color: var(--ink);
+}
+
+body::before {
+  background-image: linear-gradient(rgba(209, 232, 226, .035) 1px, transparent 1px), linear-gradient(90deg, rgba(209, 232, 226, .035) 1px, transparent 1px);
+}
+
+.site-header, footer { border-color: rgba(209, 232, 226, .16); }
+.wordmark, .hero h1, .text-link, nav a, footer a, .availability { color: var(--ink); }
+nav a:hover, footer a:hover, .text-link:hover { color: var(--mint); }
+.wordmark span { color: var(--mint); }
+.availability span, .status-dot { background: var(--mint); box-shadow: 0 0 0 4px rgba(255, 203, 154, .16); }
+.kicker, .section-tag, .skill-list article > span { color: var(--violet); }
+em, .contact h2 em, .experience h2 em { color: var(--mint); text-shadow: 0 0 24px rgba(255, 203, 154, .12); }
+
+.button { background: var(--surface); border-color: var(--surface); color: var(--surface-blue); }
+.button:hover { background: var(--mint); border-color: var(--mint); color: var(--bg); box-shadow: 0 8px 20px rgba(255, 203, 154, .17); }
+.portrait-frame {
+  background: radial-gradient(circle at 50% 45%, rgba(17, 100, 102, .3), transparent 58%), var(--bg);
+  border-color: var(--surface-blue);
+  outline-color: var(--violet);
+  box-shadow: 0 22px 55px rgba(0, 0, 0, .24), 0 0 0 9px rgba(17, 100, 102, .2);
+}
+.portrait-caption { color: var(--muted); }
+
+.focus-strip {
+  border-color: rgba(209, 232, 226, .18);
+  background: linear-gradient(110deg, rgba(17, 100, 102, .54), rgba(44, 53, 49, .9));
+  box-shadow: 0 12px 28px rgba(0, 0, 0, .16);
+}
+.focus-label { color: var(--violet); }
+.focus-bubble {
+  border-color: rgba(209, 232, 226, .28);
+  color: var(--surface-blue);
+  background: linear-gradient(145deg, var(--surface), var(--bg));
+  box-shadow: inset 0 1px 1px rgba(255, 255, 255, .12), 0 4px 10px rgba(0, 0, 0, .2);
+}
+.focus-bubble:hover { box-shadow: inset 0 1px 1px rgba(255, 255, 255, .12), 0 7px 14px rgba(0, 0, 0, .26); }
+
+.intro, .quick-facts, .skill-list, .skill-list article, .education { border-color: var(--line); }
+.intro-copy > p, .skill-list p, .education article > p:not(.year) { color: var(--muted); }
+.quick-facts span, .education .year, .role-meta, .role-number, .light { color: var(--mint); }
+.quick-facts strong { color: var(--ink); }
+.experience { background: linear-gradient(135deg, var(--surface), var(--bg)); color: var(--ink); border-color: var(--line); }
+.experience h2, .role h3 { color: var(--ink); }
+.experience-heading > p, .role-copy { color: var(--surface-blue); }
+.role, .skill-list { border-color: var(--line); }
+.role-mark, .skill-list b { color: var(--violet); }
+.experience-points span, .pill { border-color: rgba(209, 232, 226, .38); color: var(--surface-blue); background: rgba(44, 53, 49, .28); }
+
+.education article {
+  background: linear-gradient(145deg, var(--surface), var(--bg));
+  border-color: rgba(209, 232, 226, .24);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, .15);
+}
+.education article:hover { border-color: var(--mint); box-shadow: 0 18px 34px rgba(0, 0, 0, .22); }
+.education .pill { color: var(--surface-blue); border-color: rgba(209, 232, 226, .35); background: rgba(17, 100, 102, .58); }
+.next-card { background: linear-gradient(145deg, var(--surface), var(--bg)) !important; }
+.arrow-circle { border-color: var(--mint); color: var(--mint); }
+
+.contact { background: linear-gradient(145deg, var(--surface), var(--bg)); color: var(--ink); border-color: var(--line); }
+.contact h2 { color: var(--ink); }
+.contact-inner > p:not(.section-tag) { color: var(--surface-blue); }
+.direct-contact .email-card { color: var(--surface-blue); border-color: rgba(209, 232, 226, .34); background: rgba(44, 53, 49, .44); }
+.direct-contact .email-card:hover { border-color: var(--mint); background: rgba(44, 53, 49, .8); color: #fff; }
+.primary-email { background: linear-gradient(145deg, rgba(44, 53, 49, .65), rgba(17, 100, 102, .72)) !important; border-color: rgba(255, 203, 154, .62) !important; }
+.contact-kicker, .email-card b { color: var(--mint); }
+.mail-note { color: var(--surface-blue) !important; }
+footer p { color: var(--muted); }
+a:focus-visible, button:focus-visible, input:focus-visible { outline-color: var(--mint); }
+
+.profile-gate {
+  background: radial-gradient(circle at 80% 10%, rgba(17, 100, 102, .45), transparent 34%), var(--bg);
+  color: var(--ink);
+}
+.gate-card {
+  background: linear-gradient(145deg, var(--surface), var(--bg));
+  border-color: rgba(209, 232, 226, .34);
+  color: var(--ink);
+  box-shadow: 0 22px 70px rgba(0, 0, 0, .34), inset 0 1px rgba(255, 255, 255, .07);
+}
+.gate-card::before { border-color: rgba(255, 203, 154, .22); }
+.gate-eyebrow, .gate-card h1 em { color: var(--mint); }
+.gate-copy, .gate-form legend, .gate-form .choice, .gate-consent { color: var(--surface-blue); }
+.gate-form input:not([type=radio]):not([type=checkbox]) { color: var(--ink); background: var(--bg); border-color: rgba(209, 232, 226, .4); }
+.gate-form input::placeholder { color: var(--muted); }
+.gate-form input[type=radio], .gate-form input[type=checkbox] { accent-color: var(--mint); }
+.gate-form input:focus { outline-color: var(--mint); border-color: var(--mint); }
+
+/* Layout and readability refinements from the supplied screenshot. */
+.education article {
+  min-height: 310px;
+  display: flex;
+  flex-direction: column;
+}
+.education .year { font-size: 11px; margin-bottom: 24px; }
+.education article > p:not(.year) {
+  font-size: 15px;
+  line-height: 1.55;
+  margin: 12px 0 18px;
+}
+.education .pill {
+  position: static;
+  align-self: flex-start;
+  margin-top: auto;
+  font-size: 11px;
+}
+.next-card { padding-bottom: 72px !important; }
+.section-tag, .kicker, .role-meta, .role-number, .focus-label, .contact-kicker { font-size: 11px; }
+.skill-list p, .mail-note { font-size: 15px; }
+.quick-facts span { font-size: 10px; }
+.portrait-caption { font-size: 10px; }
+.experience-points span { font-size: 11px; }
+@media (max-width: 760px) {
+  .education article { min-height: 280px; }
+}
+@media (max-width: 450px) {
+  .portrait-caption { font-size: 10px; }
+}
